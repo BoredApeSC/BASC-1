@@ -104,6 +104,14 @@ function filteroutMints(obj) {
     }
     return false;
 }
+  
+	 function delay(time) {
+	  return new Promise(resolve => setTimeout(resolve, time));
+	}
+
+	async function test() {
+	  await delay(2000);
+	}  
 
 var filteredHolders = holders.filter(filteroutMints)
 
