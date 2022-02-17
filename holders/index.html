@@ -75,7 +75,7 @@ function myFunction() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
+    td = tr[i].getElementsByTagName("td")[1];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -224,8 +224,8 @@ function dataTable() {
 			var td2 = document.createElement('td');
 			td.appendChild(document.createTextNode(getNestedValue(sortoutside,holdercount + ".wallet")));
 			td2.appendChild(document.createTextNode(getNestedValue(sortoutside,holdercount + ".mints").length));
-			tr.appendChild(td);
 			tr.appendChild(td2);
+		     	tr.appendChild(td);
 			table.appendChild(tr);
 			holdercount = holdercount + 1;
 		    }
