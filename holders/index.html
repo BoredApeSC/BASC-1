@@ -234,6 +234,13 @@ function dataTable() {
 	    generateHolderWallets();
 }
 $(window).on('load', function() {
+	function delay(time) {
+	  return new Promise(resolve => setTimeout(resolve, time));
+	}
+
+	async function test() {
+	  await delay(9000);
+	}
 	dataTable();
 })	
 </script>
