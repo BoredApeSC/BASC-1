@@ -63,16 +63,6 @@ function filteroutMints(obj) {
     return false;
 }
   
-	 function delay(time) {
-	  return new Promise(resolve => setTimeout(resolve, time));
-	}
-
-	async function test() {
-	  await delay(2000);
-	}  
-
-var filteredHolders = holders.filter(filteroutMints)
-
 function filteroutMEWallet(obj) {
     if (obj.owner_wallet !== "GUfCR9mK6azb9vcpsxgXyj7XRPAKJd4KMHTTVvtncGgp") {
         return true;
@@ -80,18 +70,11 @@ function filteroutMEWallet(obj) {
     return false;
 }
 
-filteredHolders = filteredHolders.filter(filteroutMEWallet)
-
-
-
-
 function getNestedValue(obj, key) {
     return key.split(".").reduce(function(result, key) {
         return result[key]
     }, obj);
 }
-
-
 
 function groupByKey(array, key) {
     return array
@@ -102,6 +85,10 @@ function groupByKey(array, key) {
             })
         }, {})
 }
+
+function doStuffs() {
+var filteredHolders = holders.filter(filteroutMints)
+filteredHolders = filteredHolders.filter(filteroutMEWallet)
 
 var pole = groupByKey(filteredHolders, 'owner_wallet')
 
@@ -128,7 +115,7 @@ for (var propName in pole) {
 var sortoutside = outside.sort(function(a, b) {
     return b.mints.length - a.mints.length
 });
-
+}
 function generateHolderWallets() {
 	var totalholdercount = sortoutside.length
 	var holdercount = 0
