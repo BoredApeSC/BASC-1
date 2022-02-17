@@ -1,3 +1,5 @@
+function doAllStuffs() {
+
 var holders;
 fetch("../data/HkzqBHcEsppZ4QstJQT1VzRFmLARuVsCc4PZ6wau4ec3_holders.json")
     .then(Response => Response.json())
@@ -131,4 +133,5 @@ function generateHolderWallets() {
 	    table.appendChild(tr);
 	    holdercount = holdercount + 1;
 	}
+}
 }
