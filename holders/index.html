@@ -6,10 +6,6 @@
 * {
   box-sizing: border-box;
 }
-
-h2.headertekst {
-  text-align: center;
-}
 	
 #myInput {
   background-image: url('../img/search.svg');
@@ -54,7 +50,7 @@ fetch("../data/HkzqBHcEsppZ4QstJQT1VzRFmLARuVsCc4PZ6wau4ec3_holders.json")
     <script type="text/javascript" src="../js/jquery.autocompletem.js"></script>
 <body>
 
-<h2>Daily Snapshot</h2>
+<h2 style="text-align: center;">Daily Snapshot</h2>
 <input type="button" name="sel" value="Fetch" onclick="dataTable()">
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for wallet.." title="Type in a wallet">
