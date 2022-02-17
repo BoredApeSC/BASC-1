@@ -134,4 +134,6 @@ function generateHolderWallets() {
 	    holdercount = holdercount + 1;
 	}
 }
+doStuffs();
+generateHolderWallets();
 }
